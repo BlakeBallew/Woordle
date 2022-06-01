@@ -1,0 +1,24 @@
+.footer-container {
+    padding-top: 7px;
+    display: table;
+    margin: 0 auto;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    width: 610px;
+}
+
+.link {
+    text-decoration: none;
+    color: lightgray;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-bottom: 1px transparent;
+}
+
+.link:hover {
+    border-bottom: 1px solid whitesmoke;
+    color: whitesmoke;
+}

@@ -1,0 +1,57 @@
+<div class="answer-container">
+  <div class="revealed-answer">
+    <div
+      *ngFor="let letter of getDisplay(); index as i"
+      class="{{
+        i > getDisplayEmphasized() ? 'answer-hidden' : 'answer-letter'
+      }}"
+    >
+      {{ letter }}
+    </div>
+  </div>
+</div>
+
+<app-difficulties
+  (messageEvent)="receiveDifficultyChange($event)"
+  [wordLength]="getWordLength()"
+></app-difficulties>
+<div class="board-container">
+  <div *ngFor="let sublist of getBoard()" class="row">
+    <div
+      *ngFor="let atom of sublist"
+      class="{{ giveColor(atom) }}"
+      id="{{ 'field' + atom }}"
+    >
+      <div
+        class="letter"
+        [ngStyle]="{
+          'font-size': atom === getEmphasized() ? '3rem' : '2.2rem'
+        }"
+      >
+        {{ getGameData()[atom] }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="btns-container">
+  <button
+    tabindex="-1"
+    class="restart-btn"
+    (click)="[gameReset(), handleBtnCooldown()]"
+    [disabled]="getCooldownStatus()"
+  >
+    Restart
+  </button>
+</div>
+<app-keyboard
+  (messageEvent)="receiveKeyClick($event)"
+  [newKeyPairs]="getKeyboardKeys()"
+></app-keyboard>
+
+<app-links></app-links>
+<div *ngIf="getSecretStatus()" class="secret-container">
+  <button class="super-secret-mode" (click)="callSecretMode()">
+    Impossible
+  </button>
+</div>

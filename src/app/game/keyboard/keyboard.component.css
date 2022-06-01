@@ -1,0 +1,93 @@
+.keyboard-container {
+    padding-top: 3vh;
+    display: table;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.NG {
+    height: 50px;
+    width: 50px;
+    font-size: 1.8rem;
+    color: whitesmoke;
+    font-family: 'Play';
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.NF {
+    height: 50px;
+    width: 50px;
+    font-size: 1.8rem;
+    color: gray;
+    font-family: 'Play';
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.WP {
+    height: 50px;
+    width: 50px;
+    font-size: 1.8rem;
+    color: #ffc425;
+    font-family: 'Play';
+    border: 2px solid #ffc425;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.C {
+    height: 50px;
+    width: 50px;
+    font-size: 1.8rem;
+    color: #019a01;
+    font-family: 'Play';
+    border: 2px solid #019a01;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.NG, .NF, .WP, .C:hover {
+    cursor: pointer;
+}
+
+.enter-key {
+    height: 50px;
+    width: 75px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-family: 'Play';
+    border: none;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.backspace-key {
+    height: 50px;
+    width: 130px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-family: 'Play';
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.backspace-key:hover {
+    cursor: pointer;
+}
+
+.key:hover {
+    cursor: pointer;
+}
+
+.enter-key:hover {
+    cursor: pointer;
+}

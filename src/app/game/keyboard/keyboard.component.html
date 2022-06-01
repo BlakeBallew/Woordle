@@ -1,0 +1,30 @@
+<div class="keyboard-container">
+  <div *ngFor="let sublist of getKeyboard()" class="row">
+    <div *ngFor="let atom of sublist" class="btn-key">
+      <button
+        tabindex="-1"
+        *ngIf="atom.length === 1"
+        (click)="sendKeyClick(atom)"
+        class="{{ giveKeyColor(atom) }}"
+      >
+        {{ atom }}
+      </button>
+      <button
+        tabindex="-1"
+        *ngIf="atom.length === 5"
+        (click)="sendKeyClick(atom)"
+        class="enter-key"
+      >
+        {{ atom }}
+      </button>
+      <button
+        tabindex="-1"
+        *ngIf="atom.length === 9"
+        (click)="sendKeyClick(atom)"
+        class="backspace-key"
+      >
+        {{ atom }}
+      </button>
+    </div>
+  </div>
+</div>
