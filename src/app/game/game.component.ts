@@ -9,45 +9,24 @@ var validwords = require('../validwords.json');
 })
 export class GameComponent {
   //general game data
-  private wordLength: number = 5;
-  private id: number = 0;
-  private current: number = 0;
-  private guessed: number = 0;
-  private emphasized: number = -1;
-  private board: number[][] = this.generateBoard();
-  private gameData: string[] = this.generateGameData(this.wordLength * 6);
-  private keys: string[] = this.generateKeys();
-  private done: boolean = true;
-  private gameOver: boolean = false;
+  wordLength: number = 5;
+  id: number = 0;
+  current: number = 0;
+  guessed: number = 0;
+  emphasized: number = -1;
+  board: number[][] = this.generateBoard();
+  gameData: string[] = this.generateGameData(this.wordLength * 6);
+  keys: string[] = this.generateKeys();
+  done: boolean = true;
+  gameOver: boolean = false;
   private restartCooldown: boolean = false;
   private word: string = this.generateWord();
   private toDisplay: string[] = this.generateGameData(this.wordLength);
-  private displayEmphasis: number = -1;
-  private enterKeyDisabled: boolean = false;
-  private secretGameMode: boolean = false;
-  private unsentKeys!: string;
-  private newKeyboardKeys!: string;
-
-  //GETTERS
-  getWordLength(): number {
-    return this.wordLength;
-  }
-
-  getEmphasized(): number {
-    return this.emphasized;
-  }
-
-  getDisplayEmphasized(): number {
-    return this.displayEmphasis;
-  }
-
-  getBoard(): number[][] {
-    return this.board;
-  }
-
-  getGameData(): string[] {
-    return this.gameData;
-  }
+  displayEmphasis: number = -1;
+  enterKeyDisabled: boolean = false;
+  secretGameMode: boolean = false;
+  unsentKeys!: string;
+  newKeyboardKeys!: string;
 
   getCooldownStatus(): boolean {
     return this.restartCooldown;
@@ -55,14 +34,6 @@ export class GameComponent {
 
   getDisplay(): string[] {
     return this.toDisplay;
-  }
-
-  getSecretStatus(): boolean {
-    return this.secretGameMode;
-  }
-
-  getKeyboardKeys(): string {
-    return this.newKeyboardKeys;
   }
 
   //functions associated with game changes

@@ -12,13 +12,13 @@ export class KeyboardComponent {
     this.processNewKeys();
   }
 
-  private keyboard: string[][] = [
+  keyboard: string[][] = [
     ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
     ['?', 'Enter', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Backspace'],
   ];
 
-  private keyboardKeys: Map<string, string> = new Map([
+  keyboardKeys: Map<string, string> = new Map([
     ['Q', 'NG'],
     ['W', 'NG'],
     ['E', 'NG'],
@@ -50,15 +50,6 @@ export class KeyboardComponent {
 
   sendKeyClick(message: string) {
     this.messageEvent.emit(message);
-  }
-
-  //GETTERS
-  getKeyboard(): string[][] {
-    return this.keyboard;
-  }
-
-  getKeyboardKeys(): Map<string, string> {
-    return this.keyboardKeys;
   }
 
   processNewKeys(): void {

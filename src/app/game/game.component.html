@@ -2,9 +2,7 @@
   <div class="revealed-answer">
     <div
       *ngFor="let letter of getDisplay(); index as i"
-      class="{{
-        i > getDisplayEmphasized() ? 'answer-hidden' : 'answer-letter'
-      }}"
+      class="{{ i > displayEmphasis ? 'answer-hidden' : 'answer-letter' }}"
     >
       {{ letter }}
     </div>
@@ -13,10 +11,10 @@
 
 <app-difficulties
   (messageEvent)="receiveDifficultyChange($event)"
-  [wordLength]="getWordLength()"
+  [wordLength]="wordLength"
 ></app-difficulties>
 <div class="board-container">
-  <div *ngFor="let sublist of getBoard()" class="row">
+  <div *ngFor="let sublist of board" class="row">
     <div
       *ngFor="let atom of sublist"
       class="{{ giveColor(atom) }}"
@@ -25,10 +23,10 @@
       <div
         class="letter"
         [ngStyle]="{
-          'font-size': atom === getEmphasized() ? '3rem' : '2.2rem'
+          'font-size': atom === emphasized ? '3rem' : '2.2rem'
         }"
       >
-        {{ getGameData()[atom] }}
+        {{ gameData[atom] }}
       </div>
     </div>
   </div>
@@ -46,11 +44,11 @@
 </div>
 <app-keyboard
   (messageEvent)="receiveKeyClick($event)"
-  [newKeyPairs]="getKeyboardKeys()"
+  [newKeyPairs]="newKeyboardKeys"
 ></app-keyboard>
 
 <app-links></app-links>
-<div *ngIf="getSecretStatus()" class="secret-container">
+<div *ngIf="secretGameMode" class="secret-container">
   <button class="super-secret-mode" (click)="callSecretMode()">
     Impossible
   </button>
