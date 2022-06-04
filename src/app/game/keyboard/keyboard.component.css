@@ -2,6 +2,7 @@
     padding-top: 3vh;
     display: table;
     margin: 0 auto;
+    touch-action: manipulation;
 }
 
 .row {
