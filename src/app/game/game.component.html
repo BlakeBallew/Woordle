@@ -47,7 +47,7 @@
   [newKeyPairs]="newKeyboardKeys"
 ></app-keyboard>
 
-<app-links></app-links>
+<app-links *ngIf="getScreenSize() > 500"></app-links>
 
 <div *ngIf="secretGameMode" class="secret-container">
   <button class="super-secret-mode" (click)="callSecretMode()">

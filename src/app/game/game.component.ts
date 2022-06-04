@@ -36,6 +36,10 @@ export class GameComponent {
     return this.toDisplay;
   }
 
+  getScreenSize(): number {
+    return window.innerWidth;
+  }
+
   //functions associated with game changes
   receiveDifficultyChange($event: any) {
     this.wordLength = $event;

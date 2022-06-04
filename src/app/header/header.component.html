@@ -1,3 +1,8 @@
-<div class="header-container">
+<div
+  class="header-container"
+  [ngStyle]="{
+    'padding-top': getScreenSize() > 500 ? '3vh' : '5px'
+  }"
+>
   <h1 class="header">Woordle</h1>
 </div>
