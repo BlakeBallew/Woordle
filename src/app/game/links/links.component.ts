@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './links.component.html',
   styleUrls: ['./links.component.css'],
 })
-export class LinksComponent {}
+export class LinksComponent {
+  getScreenWidth(): number {
+    return window.innerWidth;
+  }
+}

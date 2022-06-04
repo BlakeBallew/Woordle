@@ -12,11 +12,7 @@ export class KeyboardComponent {
     this.processNewKeys();
   }
 
-  keyboard: string[][] = [
-    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
-    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-    ['?', 'Enter', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Backspace'],
-  ];
+  keyboard: string[][] = this.chooseCorrectKeyboard();
 
   keyboardKeys: Map<string, string> = new Map([
     ['Q', 'NG'],
@@ -47,6 +43,26 @@ export class KeyboardComponent {
     ['M', 'NG'],
     ['?', 'NG'],
   ]);
+
+  chooseCorrectKeyboard(): string[][] {
+    let keyboard: string[][];
+
+    if (window.innerWidth > 450) {
+      keyboard = [
+        ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+        ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
+        ['?', 'Enter', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Backspace'],
+      ];
+    } else {
+      keyboard = [
+        ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+        ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
+        ['Z', 'X', 'C', 'V', 'B', 'N', 'M'],
+        ['?', 'Enter', 'Backspace'],
+      ];
+    }
+    return keyboard;
+  }
 
   sendKeyClick(message: string) {
     this.messageEvent.emit(message);
@@ -85,5 +101,9 @@ export class KeyboardComponent {
 
   giveKeyColor(keyLetter: string): string {
     return this.keyboardKeys.get(keyLetter)!;
+  }
+
+  getScreenSize(): number {
+    return window.innerWidth;
   }
 }

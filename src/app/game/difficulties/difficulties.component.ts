@@ -22,4 +22,17 @@ export class DifficultiesComponent {
 
     return false;
   }
+
+  filterInput(message: number, id: number): void {
+    const width = window.innerWidth;
+    if (width < 410 && message >= 7) {
+      alert('Please use a larger screen to play this mode');
+    } else if (width < 550 && message >= 9) {
+      alert('Please use a larger screen to play this mode');
+    } else if (width < 780 && message == 11) {
+      alert('Please use a larger screen to play this mode');
+    } else {
+      this.sendDifficultyChange(message, id);
+    }
+  }
 }

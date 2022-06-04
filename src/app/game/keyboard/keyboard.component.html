@@ -4,6 +4,9 @@
       <button
         tabindex="-1"
         *ngIf="atom.length === 1"
+        [ngStyle]="{
+          'font-size': getScreenSize() < 450 ? '1.4rem' : '1.8rem'
+        }"
         (click)="sendKeyClick(atom)"
         class="{{ giveKeyColor(atom) }}"
       >
@@ -12,6 +15,9 @@
       <button
         tabindex="-1"
         *ngIf="atom.length === 5"
+        [ngStyle]="{
+          'font-size': getScreenSize() < 450 ? '1.3rem' : '1.5rem'
+        }"
         (click)="sendKeyClick(atom)"
         class="enter-key"
       >
@@ -20,6 +26,9 @@
       <button
         tabindex="-1"
         *ngIf="atom.length === 9"
+        [ngStyle]="{
+          'font-size': getScreenSize() < 450 ? '1.3rem' : '1.5rem'
+        }"
         (click)="sendKeyClick(atom)"
         class="backspace-key"
       >

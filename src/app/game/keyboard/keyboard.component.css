@@ -9,75 +9,64 @@
     justify-content: center;
 }
 
-.NG {
-    height: 50px;
-    width: 50px;
+.NG, .NF, .WP, .C {
+    width: 5vw;
+    height: 5vw;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 33px;
+    min-height: 33px;
+    line-height: 30px;
     font-size: 1.8rem;
-    color: whitesmoke;
     font-family: 'Play';
-    border: 2px solid whitesmoke;
-    border-radius: 5px;
     margin: 2px;
+    border-radius: 5px;
+}
+
+.NG {
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
 }
 
 .NF {
-    height: 50px;
-    width: 50px;
-    font-size: 1.8rem;
     color: gray;
-    font-family: 'Play';
     border: 2px solid gray;
-    border-radius: 5px;
-    margin: 2px;
 }
 
 .WP {
-    height: 50px;
-    width: 50px;
-    font-size: 1.8rem;
     color: #ffc425;
-    font-family: 'Play';
     border: 2px solid #ffc425;
-    border-radius: 5px;
-    margin: 2px;
 }
 
 .C {
-    height: 50px;
-    width: 50px;
-    font-size: 1.8rem;
     color: #019a01;
-    font-family: 'Play';
     border: 2px solid #019a01;
-    border-radius: 5px;
-    margin: 2px;
 }
 
 .NG, .NF, .WP, .C:hover {
     cursor: pointer;
 }
 
-.enter-key {
-    height: 50px;
-    width: 75px;
+
+.enter-key, .backspace-key {
+    height: 5vw;
+    max-height: 50px;
+    min-height: 34px;
     font-size: 1.5rem;
-    color: whitesmoke;
     font-family: 'Play';
+    color: whitesmoke;
     border: none;
     border: 2px solid whitesmoke;
     border-radius: 5px;
     margin: 2px;
 }
 
+.enter-key {
+    width: 75px;
+}
+
 .backspace-key {
-    height: 50px;
     width: 130px;
-    font-size: 1.5rem;
-    color: whitesmoke;
-    font-family: 'Play';
-    border: 2px solid whitesmoke;
-    border-radius: 5px;
-    margin: 2px;
 }
 
 .backspace-key:hover {

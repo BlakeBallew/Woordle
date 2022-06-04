@@ -1,13 +1,21 @@
 .footer-container {
     padding-top: 7px;
+    padding-bottom: 20px;
     display: table;
     margin: 0 auto;
 }
 
-.link-container {
+.link-container-large {
     display: flex;
     justify-content: space-between;
-    width: 610px;
+    width: 100vw;
+    min-width: 520px;
+    max-width: 610px;
+}
+
+.link-container-small {
+    width: 100vw;
+    text-align: center;
 }
 
 .link {

@@ -1,5 +1,9 @@
 <div class="footer-container">
-  <div class="link-container">
+  <div
+    class="{{
+      getScreenWidth() > 450 ? 'link-container-large' : 'link-container-small'
+    }}"
+  >
     <div class="author">
       <a
         tabindex="-1"

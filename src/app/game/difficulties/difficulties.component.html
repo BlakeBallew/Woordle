@@ -3,7 +3,7 @@
     <button
       class="difficulty-btn"
       tabindex="-1"
-      (click)="sendDifficultyChange(5, 1)"
+      (click)="filterInput(5, 1)"
       [disabled]="isDisabled(1)"
     >
       Normal
@@ -11,7 +11,7 @@
     <button
       class="difficulty-btn"
       tabindex="-1"
-      (click)="sendDifficultyChange(7, 2)"
+      (click)="filterInput(7, 2)"
       [disabled]="isDisabled(2)"
     >
       Moderate
@@ -19,7 +19,7 @@
     <button
       class="difficulty-btn"
       tabindex="-1"
-      (click)="sendDifficultyChange(9, 3)"
+      (click)="filterInput(9, 3)"
       [disabled]="isDisabled(3)"
     >
       Hard
@@ -27,7 +27,7 @@
     <button
       class="difficulty-btn"
       tabindex="-1"
-      (click)="sendDifficultyChange(11, 4)"
+      (click)="filterInput(11, 4)"
       [disabled]="isDisabled(4)"
     >
       Insane

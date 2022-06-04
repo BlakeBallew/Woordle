@@ -305,8 +305,12 @@ export class GameComponent {
   }
 
   callSecretMode(): void {
-    this.wordLength = 15;
-    this.gameReset();
+    if (window.innerWidth > 1200) {
+      this.wordLength = 15;
+      this.gameReset();
+    } else {
+      alert("This mode is so difficult you'll need a larger screen!");
+    }
     this.secretGameMode = false;
   }
 }
