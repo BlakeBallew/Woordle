@@ -109,7 +109,7 @@
     font-weight: bold;
     font-size: 0.95em;  
     padding-top: 10px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .super-secret-mode:hover {
